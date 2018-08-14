@@ -2,7 +2,8 @@
     "files.associations": {
         "system_error": "cpp",
         "type_traits": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp"
     },
     "python.linting.pylintEnabled": false
 }
