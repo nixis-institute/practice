@@ -7,7 +7,6 @@ int main()
     cout<<"enter the values in array :";
     for(i=0;i<10;i++)
     {
-
         cin>>arr[i];
     }
     for(i=0;i<10;i++)
@@ -18,8 +17,7 @@ int main()
             {
                 arr[j-1]=arr[j-1]+arr[j];
                 arr[j]=arr[j-1]-arr[j];
-                arr[j-1]=arr[j-1]-arr[j];
-                
+                arr[j-1]=arr[j-1]-arr[j];           
             }
 
         }
@@ -28,9 +26,7 @@ int main()
         for(i=0;i<10;i++)
         {
             cout<<arr[i]<<"\n";
-
         }
-        
         first=0;
         last=9;
         mid=(first+last)/2;
@@ -65,9 +61,5 @@ int main()
             else{
                 cout<<"the value is not searced";
             }
-        
-        
-        
         return 0;
-
 }

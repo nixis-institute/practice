@@ -19,7 +19,7 @@ void create(Node **first,int data)
 {
     struct Node *new_node = (Node *)malloc(sizeof(Node *));
     new_node->data = data;
-    new_node->next_node=*first;
+    new_node->next_node = *first;
     *first = new_node;
 }
 
@@ -58,7 +58,12 @@ int main()
     mid->next_node=last;
     last->data=1003;
     last->next_node=NULL;
-    int data;
+
+
+    append(last,1004);
+    append(last,1005);
+    create(&first,1004);
+    /*int data;
     char ch;
     do
     {
@@ -68,7 +73,7 @@ int main()
         append(last,data);
         cout<<"Do you want enter more ";
         cin>>ch;
-    }while(ch=='Y'||ch=='y');
+    }while(ch=='Y'||ch=='y');*/
     //DEL(first);
     printlist(first); 
     return 0;
