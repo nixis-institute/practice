@@ -5,7 +5,6 @@ def isprime(n):
             break
         else:
             flag=0
-
     if flag==1:
         return False
     else:
@@ -15,4 +14,4 @@ def isprime(n):
 n = int(input("Enter the value "))
 for i in range(3,n):
     if(isprime(i)):
-        print(i)        
+        print(i)
