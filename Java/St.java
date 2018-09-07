@@ -20,7 +20,7 @@ class St{
 
         //s.replace(oldChar, newChar)
         //s.substring(beginIndex)   //start from 1
-        System.out.println(s.indexOf("a"));
+        System.out.println(s.indexOf("j"));
         
         //System.out.println(s.trim());
         
