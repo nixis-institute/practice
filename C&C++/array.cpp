@@ -22,6 +22,5 @@ int main()
     {
     cout<<arr2[i];
     }
-    retu
-    rn 0;
+    return 0;
 }
