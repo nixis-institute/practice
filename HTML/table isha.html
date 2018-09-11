@@ -1,25 +1,48 @@
 <html>
     <title>Table</title>
     <body>
-        <table border="2">
-            <tr>
+
+        <table border="1">
+            <tr style="background-color: red;">
                 <th>name</th>
                 <th>class</th>
-                <th>roll no.</th>
                 <th>subject</th>
+                <th>section</th>
+                <td>50</td>
+                <td>60</td>
             </tr>
+            
             <tr>
-                <td>isha khan</td>
-                <td>11th</td>
-                <td>51</td>
-                <td>english</td>
+                <td>sana khan</td>
+                <td>10</td>
+                <td>science</td>
+                <td>A</td>
+                <td>50</td>
+                <td>60</td>
             </tr>
+
             <tr>
-                <td>iqra khan</td>
-                <td>12th</td>       
+                <td>shavez</td>
                 <td>20</td>
-                <td>mathe</td>
+                <td rowspan="2" style="background: darkcyan;">Math</td>
+                <td>50</td>
+                <td>60</td>
+            </tr>
+
+            <tr>
+                <td>sadiq</td>
+                <td>12th</td>       
+                <td rowspan="2" style="background:darkgreen;">science</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                 <td>sadiq</td>
+                 <td colspan="2" style="pink">english</td>
+                 <td>40</td>
             </tr>
         </table>
-    </body>
-</html>
+        <br><br><br>
+
+
+        </body>
+        </html>
