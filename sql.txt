@@ -1,0 +1,11 @@
+Alter
+
+alter table TABLE_NAME add COLUMN_NAME DATATYPE
+
+alter table TABLE_NAME change OLD_COLUMN NEW_COLUMN DATATYPE;
+
+alter table TABLE_NAME drop column COLUMN_NAME;
+
+alter table TABLE_NAME add constraint constraint_name PRIMARY KEY(column name)
+
+alter table TABLE_NAME drop INDEX constraint_name
