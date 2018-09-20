@@ -7,7 +7,8 @@ int main()
     cout<<"enter the no of elements u want ";
     cin>>a;
     cout<<"enter the values in array ";
-    for(i=0;i<a;i++){
+    for(i=0;i<a;i++)
+    {
 
         cin>>arr[i];
     }
@@ -17,7 +18,6 @@ int main()
         arr2[i]=arr[i]+1;
     }
     
-    //arr2[j]=arr[i]+1;
     for(i=0;i<a;i++)
     {
     cout<<arr2[i];
