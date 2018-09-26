@@ -1,33 +1,55 @@
 
-.nn{
-    font-size:40px;
+.mss{
+    font-size:30px;
     color:red;
 }
 
-.mn{
+.nmm{
     font-size: 30px;
-    color: blue;
+    color: red;
 
 }
 
-
-body{
-    font-size: 20px;
-    color:rgb(80, 226, 43);
-    background:color :red;
+.nnn{
+    font-size: 23px;
+    color:blue
 
 }
-
-
-
-.ddd{
-    font-size:40px;
-    color:red;
-
 
 .rrr{
-    font-size:20px;
-    color:green:
+    font-size: 23px;
+    color:blue
+
+}   
+
+
+.sss{
+    font-size:23px;
+    color:blue
+ 
+}
+
+.aaa{
+    font-size:15px;
+    color:green
 
 }
 
+.ttt{
+    font-size:15px;
+    color:violet
+
+}
+
+
+.jjj{
+    font-size:15px;
+    color:palevioletred
+
+}
+
+#t{
+    color:black;
+    text-align: center;
+    font-family: Algerian;
+}
