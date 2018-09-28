@@ -6,11 +6,13 @@ int main()
     cout<<"enter a pay amount";
     cin>>a;
 
+
     if (c<20000){
     c=a*8/100;
       cout<<"the final price is "<<a-c;
     }
-    else{
+
+   else{
         c=a*10/100;
         cout<<"final price"<<a-c;
     }

@@ -10,7 +10,7 @@ int main()
     cout<<"enter a n";
     cin>>n;
 
-    
+
     sn=(n/2)*(2*a+(n-1)*d);
     cout<<"the sn is"<<sn;
     return 0;
