@@ -1,0 +1,14 @@
+.body{
+    background-color: aqua;
+}
+.main{
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: yellow;
+    height: 97vh;
+}
+.form{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+}
