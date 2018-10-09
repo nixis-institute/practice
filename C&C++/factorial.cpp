@@ -5,8 +5,8 @@ class calculation
     private:
     int a,b;
     public:
-    void sum(int);
-    int input();
+     void mul(int);
+     int input();
 };
 int calculation::input()
 {
@@ -14,18 +14,20 @@ int calculation::input()
     cin>>a;
     cout<<"enter the secound value";
     cin>>b;
-    return (a+b);
+ 
+    return(a*b);
 }
-    void calculation::sum(int x)
-    {
-        cout<<"\n\n the sum :"<<x;
-    }
-    int main()
-    {
-        calculation object;
-        int a;
-        a=object.input();
-        object.sum(a);
-        return 0;
-    }
+void calculation::mul(int x)
+{
+    cout<<"\n\n multiplication"<<x;
+    
+}
+int main()
+{
+calculation object;
+int a;
+a=object.input();
+object.mul(a);
+return 0;
+}
 
