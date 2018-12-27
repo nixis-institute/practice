@@ -6,4 +6,4 @@ for i in data:
     file.execute(command)
 file.commit()
 file.close()
-print("sucess!")    
+print("sucess!")
