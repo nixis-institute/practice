@@ -3,7 +3,7 @@ using namespace std;
 class A
 {
     private:
-    int a,b,c;
+    int a,b,c,d;
     public:
     void sub(int);
     int input();
