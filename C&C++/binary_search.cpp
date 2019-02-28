@@ -18,9 +18,6 @@ int main()
     first=0;
     last=9;
     mid=(first+last)/2;
-    //cout<<mid<<"\n";
-    //cout<<first<<"\n";
-    //cout<<last<<"\n";
     
     while(first<=last)
     {

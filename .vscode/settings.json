@@ -5,7 +5,8 @@
         "iostream": "cpp",
         "iosfwd": "cpp",
         "istream": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "stdio.h": "c"
     },
     "python.linting.pylintEnabled": false
 }

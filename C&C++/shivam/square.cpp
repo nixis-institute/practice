@@ -7,8 +7,6 @@ int main()
     cin>>a;
     cout<<"enter a second value";
     cin>>b;
-
-
     if(a==1){
     a=b*b;
     cout<<"the square is"<<a;
@@ -17,10 +15,7 @@ int main()
     a=b*b*b;
     cout<<"the cube is"<<a;
     }
-
-    else{
+        else{
     cout<<"you are a wrong";
     } 
-
-
 }
