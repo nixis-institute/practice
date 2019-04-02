@@ -8,5 +8,6 @@
         "typeinfo": "cpp",
         "stdio.h": "c"
     },
-    "python.linting.pylintEnabled": false
+    "python.linting.pylintEnabled": false,
+    "C_Cpp.errorSquiggles": "Disabled"
 }
