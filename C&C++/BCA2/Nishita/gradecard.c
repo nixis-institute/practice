@@ -11,7 +11,6 @@ int main()
 
      per=st/6;
      printf("%d is your perchange\n",per);
-
         if(per>= 80 && per<100)
         {
             printf("You got A grade");

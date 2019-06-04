@@ -20,11 +20,13 @@ void isfull()
 
 }
 void push(int data)
-{   int data;
+{   
+    int get;
     if(top<=9)
     {
-        top++;
+        ++top;
         stack[top]=data;
+        //cout<<"This your data "<<stack;
     }
     else{
         cout<<"stack is full";
@@ -41,25 +43,20 @@ int pop()
 
         cout<<"stack is empty";
     }
-
 }
 int main()
 {
-
         int data;
         char ch;
         cout<<"enter element : ";
         cin>>data;
-        
         do{
              push(data);
             cout<<"choose y for continue : ";
                 cin>>ch;
                 
                 cout<<"Enter element : ";
-                cin>>data;
-               
-
+                cin>>data; 
         }
         while(ch=='y' || ch=='Y');
         

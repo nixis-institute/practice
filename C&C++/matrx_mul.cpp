@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     //int i,j,k,m,n,r,sum=0;
-    int i,j,k,sum=0,n=3;
+    int i,j,k,sum=0,n=2;
     int a[3][3],b[3][3],c[3][3];
     //cout<<"enter the order of matrix"<<endl;
     //cin>>n;

@@ -10,4 +10,4 @@ printf("enter third valu");
 scanf("%d",&c);
 d=a+b+c;
 printf("sum of 3 valus %d",d);
-} marriage fixed 
+}  

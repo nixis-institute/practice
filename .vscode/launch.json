@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Loop",
+            "request": "launch",
+            "mainClass": "Loop",
+            "projectName": "practice_eac40c27"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Loop",
+            "request": "launch",
+            "mainClass": "Basic.Loop",
+            "projectName": "practice_eac40c27"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Inc",
             "request": "launch",
             "mainClass": "Inc",
