@@ -1,0 +1,3 @@
+name    class   marks
+arun    XII     20
+aman    XII     29

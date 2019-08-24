@@ -13,14 +13,26 @@ void printlist(node *n)
         cout<<n->data<<endl;
         n=n->next_node;
     }
+    cout<<endl;
 }
-void create(node **first,int data)
+void create(node** first,int data)
 {
     struct node *new_node=(node*)malloc(sizeof(node*));
     new_node->data=data;
     new_node->next_node=*first;
     *first=new_node;
 }
+
+void append(node *last,int data)
+{
+    struct node *new_node = (node *)malloc(sizeof(node *));
+    last->next_node = new_node;
+    new_node->data = data;
+    new_node->next_node=NULL;
+    //*last = *new_node;
+    //*new_node = *last;
+}
+
 int main()
 {
     node *first;
@@ -36,5 +48,7 @@ int main()
     last->data=5835;
     last->next_node=NULL;
     printlist(first);
+    while()
+    create(&last,data);
     return 0;
 }

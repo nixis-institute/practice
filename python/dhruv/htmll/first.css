@@ -1,0 +1,14 @@
+
+.left{
+background:pink;
+color: black;
+float:left;    
+font-size: 23px;
+}
+
+.right{
+float:right;
+color:black;
+background: pink;
+font-size:23px
+}
