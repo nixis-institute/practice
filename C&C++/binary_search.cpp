@@ -5,8 +5,6 @@ int main()
 {
     int i,n,array[10],first,last,mid,search;
     bool flag=false;
-    //cout<<"enter the number of elements:";
-    //cin>>n;
     cout<<"enter the 10 sorted values:";
     for(i=0;i<10;i++)
     {
