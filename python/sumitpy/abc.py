@@ -1,6 +1,5 @@
-n=6
-for i in range(1,n):
-    for j in range(1,19):
-        print("5",end="")
-    print("")
-    
+import mysql.connector as sqltor
+mycon=sqltor.connect(host="localhost",user="root",password="nixis")
+if mycon.is_connected():
+    print("ok")
+mycon.close()

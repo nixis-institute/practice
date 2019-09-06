@@ -44,6 +44,7 @@ int main()
 
     push(st);
     push(st);
+    push(st);
     /*for(int i=0;i<=st.position;i++)
     {
         cout<<st.array[i]<<endl;

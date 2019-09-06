@@ -19,11 +19,7 @@ void append(node **last,int data)
 
 void create(node **first,int data)
 {
-    node *new_node = (node*)malloc(sizeof(node*));
-    new_node ->data = data;
-    new_node->next_node = *first;
-    *first = new_node;
-}
+    node *new_node = (node*)
 
 
 int main()

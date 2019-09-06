@@ -15,7 +15,6 @@ void isfull()
     if(top==10)
     {
         cout<<"overflow";
-
     }
 
 }
