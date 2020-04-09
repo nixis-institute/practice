@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backbone Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+</head>
+
+
+<script type="template" id="single">
+
+    <h2><%= country %></h2>
+
+    <table class="table">
+        <tr>
+            <th>Case</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
+        <% _.each(data,function(i){ %>
+            <tr>
+                <td><%=i.Cases%> </td>
+                <td><%=i.Status%> </td>
+                <td><%=i.Date%> </td>
+            </tr>
+        <% })%>
+    </table>
+
+</script>
+
+
+<script type="template" id="count">
+    <h3>Whole countries</h3>
+    <table class="table">
+        <tr>
+            <th>Country</th>
+            <th>TotalDeaths</th>
+            <th>TotalConfirmed</th>
+            <th>TotalRecovered</th>
+        </tr>
+
+              
+        <% _.each(data,function(i){ %>
+            <% if(i.TotalDeaths>0){%>  
+            <tr>
+
+                    <td style="color:green">     
+                    
+                        <a href="#detail/<%=i.Slug%>">
+                        <%= i.Country %>
+                        </a>
+                    
+                    
+                    </td>
+
+                <td> <%= i.TotalDeaths %> </td>
+                <td> <%= i.TotalConfirmed %> </td>
+                <td> <%= i.TotalRecovered %> </td>
+            </tr>
+            <% }%>    <% }) %>
+
+    </table>
+</script>
+
+
+
+
+<script type="text/javascript">
+    var views = Backbone.View.extend({
+        home:()=>{
+            $(".data").html("<h3>This is Home Page</h3>")
+        },
+        list:()=>{
+
+            url="https://api.covid19api.com/summary"
+            $.ajax({
+                url:url,
+                method:'get',
+                beforeSend:()=>{
+                    $(".data").html("<h3>Loading.....</h3>")
+                },
+                success:(e)=>{
+                    console.log(e)
+                    var count = 0
+                    e.Countries.forEach(i => {
+                        count = count + i.TotalDeaths
+                        // console.log(i.TotalDeaths)
+                    });
+
+                    console.log(count)
+                    
+
+                    // var overview = _.template($('#gl').html())
+                    var all = _.template($("#count").html())
+                    // $('.global').html(overview({'confirm':e.Global.TotalConfirmed ,"death":e.Global.TotalDeaths,"recover":e.Global.TotalRecovered}))
+                    $(".data").html(all({"data":e.Countries}))
+                }
+            })
+                
+            // $(".data").html("<h3>This is List Page</h3>")
+        },
+        detail:(c)=>{
+            console.log(c.country)
+            url=`https://api.covid19api.com/dayone/country/${c.country}/status/confirmed`
+            
+            $.ajax({
+                url:url,
+                method:'get',
+                beforeSend:()=>{
+                    $(".data").html("<h3>Loading.....</h3>")
+                },
+                success:(e)=>{
+                    console.log(e)
+                    var all = _.template($("#single").html())
+                    $(".data").html(all({"data":e,"country":c.country}))
+                }
+            })
+
+            // $(".data").html("<h3>This is Detail Page</h3>")
+        },                
+    })
+
+    var view = new views();
+    var Route = Backbone.Router.extend({
+        routes:{
+            '/':'home',
+            '':'home',
+            'list':'list',
+            'detail/:country':'detail',
+        }
+    });
+
+    // router.d
+    var router = new Route();
+    router.on('route:home',()=>{
+        view.home()
+    })
+
+    router.on('route:list',()=>{
+        view.list()
+    })
+
+    router.on('route:detail',(c)=>{
+        view.detail({country:c})
+    })
+
+
+    Backbone.history.start();
+
+</script>
+
+
+
+
+<body>
+    <a href="#list">List</a>
+    <a href="#detail">detail</a>
+
+
+
+    <div class="data">
+
+    </div>
+
+</body>
+
+
+
+
+
+
+</html>
